@@ -23,7 +23,7 @@ func main() {
 	vips.LoggingSettings(nil, vips.LogLevelError)
 	vips.Startup(nil)
 
-	_, err := parmap.IntsToStrings(context.Background(), items, 100, func(item, index int) (string, error) {
+	_, err := parmap.IntsToStrings(context.Background(), items, 12, func(item, index int) (string, error) {
 		frameIndex := item%91 + 1
 
 		set1Path := fmt.Sprintf("fixtures/frameset1/%05d.jpg", frameIndex)
